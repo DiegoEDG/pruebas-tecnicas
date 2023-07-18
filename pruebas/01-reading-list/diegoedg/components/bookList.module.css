@@ -1,0 +1,8 @@
+.booksContainer {
+	display: inline-flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 20px;
+	margin-top: 10px;
+}
