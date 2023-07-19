@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import { BookList } from './components';
+import { BookList, Filters } from './components';
 import listIcon from './assets/list.svg';
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
 					</button>
 				</div>
 			</div>
+			<Filters />
 			<BookList />
 		</div>
 	);
