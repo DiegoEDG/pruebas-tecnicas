@@ -2,6 +2,20 @@
 	margin: 0 auto;
 	width: 1440px;
 	height: auto;
-
-	border: 1px solid white;
+	padding: 10px;
+}
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.listCounter {
+	margin-bottom: 5px;
+	margin-right: 5px;
+}
+.iconButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
