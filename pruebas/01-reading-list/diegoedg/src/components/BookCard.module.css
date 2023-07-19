@@ -1,0 +1,46 @@
+.card {
+	display: flex;
+	flex-direction: row;
+	width: 450px;
+	height: 200px;
+	background-color: #2e3645;
+	border-radius: 15px;
+	overflow: hidden;
+}
+.img {
+	width: 150px;
+	height: 200px;
+	object-fit: fill;
+}
+.titleContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 5px;
+}
+.infoContainer {
+	padding: 10px;
+}
+.bookInfo {
+	font-size: 16px;
+	color: #9c9c9c;
+}
+.synopsis {
+	font-size: 18px;
+	margin-top: 5px;
+}
+.iconButton {
+	width: 30px;
+	height: 30px;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0px;
+	margin: 0px;
+	border-radius: 100%;
+}
+.icon {
+	width: 30px;
+	height: 30px;
+}
