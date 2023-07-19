@@ -1,0 +1,21 @@
+.filtersContainer {
+	display: flex;
+	flex-direction: row;
+	margin: 15px 0;
+}
+.selectContainer {
+	display: flex;
+	flex-direction: row;
+	margin-right: 20px;
+}
+.select {
+	background-color: transparent;
+	color: #fff;
+	margin-left: 5px;
+}
+.rangeContainer {
+	width: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
