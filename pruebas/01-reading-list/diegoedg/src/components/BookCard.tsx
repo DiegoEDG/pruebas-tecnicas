@@ -18,10 +18,10 @@ const BookCard: FC<PropsWithChildren<Props>> = ({ book }) => {
 						<img src={add} className={styles.icon} />
 					</button>
 				</div>
+				<p className={styles.bookInfo}>{book.author.name}</p>
 				<p className={styles.bookInfo}>
-					{book.year}・{book.genre}
+					{book.year}・{book.genre}・{book.pages} pages
 				</p>
-				<p className={styles.bookInfo}> {book.author.name}</p>
 				<p className={styles.synopsis}>{book.synopsis}</p>
 			</div>
 		</div>
