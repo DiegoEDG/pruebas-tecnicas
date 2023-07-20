@@ -1,22 +1,32 @@
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, useContext } from 'react';
 import { Book } from '../interfaces';
 import styles from './BookCard.module.css';
-import add from '../assets/add.svg';
+import addIcon from '../assets/add.svg';
+import removeIcon from '../assets/remove.svg';
+import { StoreContext } from '../context';
 
 interface Props {
 	book: Book;
 }
 
 const BookCard: FC<PropsWithChildren<Props>> = ({ book }) => {
+	const { handleAddToList, list, hndlRemoveFromList } = useContext(StoreContext);
+
 	return (
 		<div className={styles.card}>
 			<img className={styles.img} src={book.cover} />
 			<div className={styles.infoContainer}>
 				<div className={styles.titleContainer}>
 					<h4>{book.title}</h4>
-					<button className={styles.iconButton}>
-						<img src={add} className={styles.icon} />
-					</button>
+					{list.includes(book) ? (
+						<button className={styles.iconButton} onClick={() => hndlRemoveFromList(book.title)}>
+							<img src={removeIcon} className={styles.icon} />
+						</button>
+					) : (
+						<button className={styles.iconButton} onClick={() => handleAddToList(book.title)}>
+							<img src={addIcon} className={styles.icon} />
+						</button>
+					)}
 				</div>
 				<p className={styles.bookInfo}>{book.author.name}</p>
 				<p className={styles.bookInfo}>
