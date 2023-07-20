@@ -1,0 +1,33 @@
+.listContainer {
+	position: fixed;
+	top: 0%;
+	left: 0%;
+	z-index: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.503);
+}
+.list {
+	position: fixed;
+	z-index: 10;
+	right: 20%;
+	top: 50px;
+	width: 1000px;
+	height: 90%;
+	padding: 20px;
+	background-color: #212732;
+	overflow: hidden;
+}
+.listHeader {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.closeButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	margin: 0px;
+	padding: 0px;
+}
