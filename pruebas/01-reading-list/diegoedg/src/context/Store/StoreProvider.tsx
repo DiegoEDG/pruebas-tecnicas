@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren, useReducer } from 'react';
+import { FC, PropsWithChildren, useReducer, useContext } from 'react';
 import StoreReducer from './StoreReducer';
 import { StoreContext } from './StoreContext';
 import { Book } from '../../interfaces';
@@ -17,7 +17,27 @@ const STORE_INITIAL_STATE: StoreState = {
 const StoreProvider: FC<PropsWithChildren> = ({ children }) => {
 	const [state, dispatch] = useReducer(StoreReducer, STORE_INITIAL_STATE);
 
-	return <StoreContext.Provider value={{ ...state }}>{children}</StoreContext.Provider>;
+	console.log(state);
+
+	const handleAddToList = (title: string) => {
+		dispatch({ type: '[Store] Add To List', payload: title });
+	};
+	const hndlRemoveFromList = (title: string) => {
+		dispatch({ type: '[Store] Remove From List', payload: title });
+	};
+
+	return (
+		<StoreContext.Provider
+			value={{
+				...state,
+				//Methods
+				handleAddToList,
+				hndlRemoveFromList
+			}}
+		>
+			{children}
+		</StoreContext.Provider>
+	);
 };
 
 export default StoreProvider;
